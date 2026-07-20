@@ -1,4 +1,4 @@
-﻿package com.reasonix.notify
+package com.reasonix.notify
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -40,10 +40,10 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 CHANNEL_ID,
-                "电脑通知",
+                "手机弹窗",
                 NotificationManager.IMPORTANCE_HIGH
             ).apply {
-                description = "来自电脑的消息推送"
+                description = "从电脑推送到手机的通知"
                 enableVibration(true)
                 enableLights(true)
             }
@@ -56,3 +56,4 @@ class MainActivity : AppCompatActivity() {
         const val CHANNEL_ID = "pc_notify"
     }
 }
+
